@@ -16,4 +16,3 @@ class BasePage:
     def click(self, locator):
         element = self.wait_for_element(locator)
         element.click()
-
