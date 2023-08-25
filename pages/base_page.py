@@ -16,3 +16,14 @@ class BasePage:
     def click(self, locator):
         element = self.wait_for_element(locator)
         element.click()
+
+    def enter_text(self, locator, text):
+        element = self.wait_for_element(locator)
+        element.clear()
+        element.send_keys(text)
+
+    def get_page_title(self):
+        return self.driver.title
+
+    def quit(self):
+        self.driver.quit()
