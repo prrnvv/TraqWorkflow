@@ -21,9 +21,9 @@ class TestLoginPositive:
     @retry(max_retries=3, delay=1)
     def test_login_positive(self, setup_teardown_actions, username, password, logger):
         login_page = LoginPage(setup_teardown_actions)
-        logger.info(f"Entering Username {username}")
+        logger.info(f"Entering Username: {username}")
         login_page.enter_username(username)
-        logger.info(f"Entering Password {password}")
+        logger.info(f"Entering Password: {password}")
         login_page.enter_password(password)
         logger.info(f"Clicking on Login Button")
         login_page.click_login()
